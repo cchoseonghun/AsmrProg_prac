@@ -7,7 +7,7 @@
 
   // Function to render ASCII frame
   function renderAsciiFrame() {
-    var b = []; // Array to stay ascii chars
+    var b = []; // Array to stay acii chars
     var z = []; // Array to store depth values
 
     var width = 280; // Width of frame
@@ -15,7 +15,7 @@
 
     A += 0.07; // Increament angle a
     B += 0.03; // Increament angle b
-    // Sine and Cosine of angles
+    // Sin and Cosine of angles
     var cA = Math.cos(A),
       sA = Math.sin(A),
       cB = Math.cos(B),
@@ -32,16 +32,16 @@
     // Generate the ascii frame
     for (var j = 0; j < 6.28; j += 0.07) {
       var ct = Math.cos(j); // Cosine of j
-      var st = Math.sin(j); // Sine of j
+      var st = Math.sin(j); // Sin of j
 
       for (var i = 0; i < 6.28; i += 0.02) {
-        var sp = Math.sin(i); // Sine of i
-        (cp = Math.cos(i)), // cosine of i
+        var sp = Math.sin(i); // Sin of i
+        (cp = Math.cos(i)), // Cosine of i
           (h = ct + 2), // Height calculation
           // Distance calculation
           (D = 1 / (sp * h * sA + st * cA + 5)),
           // Temporary variable
-          (t = sp * h * cA - st - sA);
+          (t = sp * h * cA - st * sA);
 
         // Calculate cordinates of ascii char
         var x = Math.floor(
